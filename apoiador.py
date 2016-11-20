@@ -35,9 +35,12 @@ class apoiador(object):
             else:
                 row = self.collection.find({ "id": str(pCodigo)})
 
+            for apoiadores in row:
+                print('cod:', apoiadores['id'])
+                print('Nome:', apoiadores['name'])
+                print('Foto:', apoiadores['picture'])
+                print('\n____________\n')
 
-            for document in row:
-                pprint(document)
 
         except:
             self.HasError = True
